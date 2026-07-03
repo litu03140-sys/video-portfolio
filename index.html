@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>视频创作者作品集</title>
+    <meta
+      name="description"
+      content="视频创作者面试作品集：后期制作、摄影、灯光与美术方向的精选项目。"
+    />
+    <meta name="author" content="你的姓名" />
+    <meta name="keywords" content="视频作品集, 后期制作, Vlog, 摄影, 灯光, 美术" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="视频创作者作品集" />
+    <meta
+      property="og:description"
+      content="视频创作者面试作品集：后期制作、摄影、灯光与美术方向的精选项目。"
+    />
+    <meta property="og:image" content="assets/hero-portfolio.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://litu03140-sys.github.io/video-portfolio/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/hero-portfolio.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json" id="structured-data">{}</script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span id="site-brand"></span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="作品分类"></nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" id="hero-image" src="assets/hero-portfolio.png" alt="" />
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-copy" id="hero-copy"></p>
+          <div class="hero-actions" id="hero-actions"></div>
+        </div>
+        <div class="hero-meta" id="hero-meta" aria-label="能力概览"></div>
+      </section>
+
+      <section class="intro section-wrap" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow" id="intro-eyebrow"></p>
+          <h2 id="intro-title"></h2>
+        </div>
+        <p id="intro-copy"></p>
+      </section>
+
+      <section id="post" class="section-wrap category-section" aria-labelledby="post-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="post-eyebrow"></p>
+            <h2 id="post-title"></h2>
+          </div>
+          <div class="filter-bar" id="post-filters" role="tablist" aria-label="后期制作子分类"></div>
+        </div>
+        <div class="project-grid" id="post-projects"></div>
+      </section>
+
+      <section id="camera" class="section-wrap category-section" aria-labelledby="camera-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="camera-eyebrow"></p>
+            <h2 id="camera-title"></h2>
+          </div>
+          <p class="section-note" id="camera-note"></p>
+        </div>
+        <div class="project-grid" id="camera-projects"></div>
+      </section>
+
+      <section id="lighting" class="section-wrap category-section" aria-labelledby="lighting-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="lighting-eyebrow"></p>
+            <h2 id="lighting-title"></h2>
+          </div>
+          <p class="section-note" id="lighting-note"></p>
+        </div>
+        <div class="project-grid" id="lighting-projects"></div>
+      </section>
+
+      <section id="art" class="section-wrap category-section" aria-labelledby="art-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="art-eyebrow"></p>
+            <h2 id="art-title"></h2>
+          </div>
+          <p class="section-note" id="art-note"></p>
+        </div>
+        <div class="project-grid" id="art-projects"></div>
+      </section>
+
+      <section class="section-wrap process" aria-labelledby="process-title">
+        <div>
+          <p class="eyebrow" id="process-eyebrow"></p>
+          <h2 id="process-title"></h2>
+        </div>
+        <div class="process-grid" id="process-grid"></div>
+      </section>
+
+      <section id="contact" class="contact section-wrap" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow" id="contact-eyebrow"></p>
+          <h2 id="contact-title"></h2>
+        </div>
+        <div class="contact-panel">
+          <dl class="contact-list" id="contact-list"></dl>
+          <a class="button primary" id="contact-button" href="#"></a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭">×</button>
+      <div class="dialog-media" id="dialog-media"></div>
+      <div class="dialog-body">
+        <p class="eyebrow" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+        <dl class="detail-list">
+          <div>
+            <dt id="dialog-role-label"></dt>
+            <dd id="dialog-role"></dd>
+          </div>
+          <div>
+            <dt id="dialog-focus-label"></dt>
+            <dd id="dialog-focus"></dd>
+          </div>
+          <div>
+            <dt id="dialog-output-label"></dt>
+            <dd id="dialog-output"></dd>
+          </div>
+        </dl>
+        <a class="button secondary" id="dialog-link" href="#" target="_blank" rel="noreferrer"></a>
+      </div>
+    </dialog>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

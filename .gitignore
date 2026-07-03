@@ -1,0 +1,5 @@
+.DS_Store
+.tools/
+.gh-config/
+tmp/
+media/post-production/vlog/*.mov
