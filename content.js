@@ -17,6 +17,7 @@ window.PORTFOLIO_CONTENT = {
   navigation: [
     { label: "精选作品", href: "#top" },
     { label: "全部项目", href: "#works" },
+    { label: "无损原片", href: "lossless.html" },
     { label: "详细介绍", href: "#about" },
   ],
 
@@ -27,6 +28,7 @@ window.PORTFOLIO_CONTENT = {
     output: "交付",
     closeDialog: "关闭",
     openVideoLink: "打开高清链接",
+    openLosslessPage: "查看无损原片",
     openProjectLink: "打开作品链接",
     videoFallback: "当前浏览器无法直接播放该视频，请使用下方链接打开。",
   },
@@ -45,6 +47,7 @@ window.PORTFOLIO_CONTENT = {
     tags: ["Premiere / 剪辑", "DaVinci / 调色", "摄影协作", "灯光与美术理解"],
     actions: [
       { label: "查看精选作品", href: "#top", style: "primary" },
+      { label: "无损原片入口", href: "lossless.html", style: "secondary" },
       { label: "查看详细介绍", href: "#about", style: "secondary" },
     ],
   },
@@ -52,23 +55,44 @@ window.PORTFOLIO_CONTENT = {
   showcase: {
     eyebrow: "Selected Work",
     title: "打开就能看的作品",
-    note: "面试官可直接点击窗口播放视频。",
+    note: "首屏只保留最重要的信息：人、方向、作品入口。",
     primaryProjectIds: ["vlog-video-01", "vlog-video-02"],
   },
 
   categoryTiles: [
-    { label: "Vlog", projectId: "vlog-video-01", note: "叙事节奏 / 生活记录" },
-    { label: "调色", projectId: "color-grading", note: "色彩统一 / 氛围控制" },
-    { label: "日常剪辑", projectId: "daily-edit", note: "高频交付 / 信息效率" },
-    { label: "摄影", projectId: "camera-work", note: "构图 / 运动 / 现场素材" },
-    { label: "灯光", projectId: "lighting-work", note: "人物质感 / 空间层次" },
-    { label: "美术", projectId: "art-direction", note: "道具 / 色彩 / 场景信息" },
+    { number: "01", label: "Vlog", projectId: "vlog-video-01", note: "叙事节奏 / 生活记录" },
+    { number: "02", label: "调色", projectId: "color-grading", note: "色彩统一 / 氛围控制" },
+    { number: "03", label: "日常剪辑", projectId: "daily-edit", note: "高频交付 / 信息效率" },
+    { number: "04", label: "摄影", projectId: "camera-work", note: "构图 / 运动 / 现场素材" },
+    { number: "05", label: "灯光", projectId: "lighting-work", note: "人物质感 / 空间层次" },
+    { number: "06", label: "美术", projectId: "art-direction", note: "道具 / 色彩 / 场景信息" },
   ],
 
   works: {
     eyebrow: "All Work",
     title: "全部作品窗口",
-    note: "可继续添加视频；每个窗口都从 content.js 中维护。",
+    note: "每个窗口都能进入详情，适合面试官按方向快速浏览。",
+  },
+
+  lossless: {
+    eyebrow: "Original Master",
+    title: "无损原片观看页",
+    copy:
+      "这里用于放原始画质视频。它不依赖 Bilibili 或腾讯视频，只需要一个可公开访问的原片直链。",
+    emptyTitle: "无损直链还没有填写",
+    emptyCopy:
+      "当前先播放网页预览版。把原片上传到云存储后，将直链填入 content.js 的 losslessUrl，就会自动变成无损播放入口。",
+    localPreview: "本机选择原片预览",
+    directLink: "打开原片直链",
+    downloadLink: "下载原片",
+    backLink: "返回作品集首页",
+    adminLink: "查看修改方法",
+  },
+
+  admin: {
+    editUrl: "https://github.com/litu03140-sys/video-portfolio/edit/main/content.js",
+    repoUrl: "https://github.com/litu03140-sys/video-portfolio",
+    pagesUrl: "https://litu03140-sys.github.io/video-portfolio/",
   },
 
   about: {
@@ -100,6 +124,9 @@ window.PORTFOLIO_CONTENT = {
         mimeType: "video/mp4",
         poster: "assets/video-posters/vlog-video-01.png",
         highQualityUrl: "",
+        losslessUrl: "",
+        originalFileName: "copy_A98E020C-E26F-4F26-BD71-9D7DE9A1E9BC.MOV",
+        originalSize: "约 745MB",
         embedUrl: "",
       },
     },
@@ -121,6 +148,9 @@ window.PORTFOLIO_CONTENT = {
         mimeType: "video/mp4",
         poster: "assets/video-posters/vlog-video-02.png",
         highQualityUrl: "",
+        losslessUrl: "",
+        originalFileName: "copy_7B2CBBAE-D7F5-4DFA-816A-F324AC651E90.MOV",
+        originalSize: "约 2.6GB",
         embedUrl: "",
       },
     },

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>后台修改说明 | 视频作品集</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>作品集后台说明</span>
+      </a>
+      <nav class="nav-links" aria-label="后台说明导航">
+        <a href="index.html">前台页面</a>
+        <a href="lossless.html">无损原片页</a>
+      </nav>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-hero" aria-labelledby="admin-title">
+        <p class="eyebrow">Start Here</p>
+        <h1 id="admin-title">你只需要改一个文件</h1>
+        <p>所有文字、个人信息、作品名称、视频链接，都在 `content.js` 里。改完点绿色按钮保存，网页会自动更新。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/litu03140-sys/video-portfolio/edit/main/content.js">
+            打开后台修改文件
+          </a>
+          <a class="button secondary" href="https://litu03140-sys.github.io/video-portfolio/">
+            查看面试官页面
+          </a>
+        </div>
+      </section>
+
+      <section class="admin-steps" aria-label="修改步骤">
+        <article>
+          <small>01</small>
+          <h2>打开后台</h2>
+          <p>点上面的“打开后台修改文件”。如果 GitHub 让你登录，就用你注册的账号登录。</p>
+        </article>
+        <article>
+          <small>02</small>
+          <h2>只改引号里的文字</h2>
+          <p>例如把 `"你的姓名"` 改成你的真实姓名。不要删逗号、括号和冒号。</p>
+        </article>
+        <article>
+          <small>03</small>
+          <h2>保存</h2>
+          <p>页面右上角或底部找到绿色 `Commit changes`，点它，再点一次确认。等待 1 到 3 分钟。</p>
+        </article>
+      </section>
+
+      <section class="admin-guide" aria-label="具体改哪里">
+        <div>
+          <p class="eyebrow">What To Edit</p>
+          <h2>具体改哪里</h2>
+        </div>
+        <div class="guide-list">
+          <article>
+            <h3>改个人信息</h3>
+            <pre><code>hero: {
+  title: "你的姓名",
+  role: "视频创作者 / 后期制作",
+  copy: "你的个人介绍",
+}</code></pre>
+          </article>
+          <article>
+            <h3>改作品标题</h3>
+            <pre><code>{
+  id: "vlog-video-01",
+  title: "Vlog 作品 01",
+  short: "一句话介绍",
+  description: "完整项目介绍",
+}</code></pre>
+          </article>
+          <article id="lossless-url">
+            <h3>填无损原片直链</h3>
+            <pre><code>media: {
+  src: "网页预览版路径",
+  losslessUrl: "https://这里粘贴原片直链"
+}</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="admin-warning">
+        <h2>关于无损视频，你记住这一句就够了</h2>
+        <p>GitHub Pages 不能直接放 745MB、2.6GB 的原始 MOV。要无损，就把原片上传到“能提供公开 HTTPS 直链”的云存储，然后把直链填到 `losslessUrl`。</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -45,6 +45,8 @@ function createLink(item, className) {
   link.href = item.href;
   link.textContent = item.label;
   if (className) link.className = className;
+  if (item.target) link.target = item.target;
+  if (item.rel) link.rel = item.rel;
   return link;
 }
 
@@ -155,7 +157,7 @@ function renderStaticText() {
   dialogOutputLabel.textContent = labels.output;
 }
 
-function createProjectButton(project, variant = "standard") {
+function createProjectButton(project, variant = "standard", index = 0) {
   const button = document.createElement("button");
   button.className = `project-window ${variant}`;
   button.type = "button";
@@ -174,6 +176,10 @@ function createProjectButton(project, variant = "standard") {
   play.className = project.media?.type === "video" ? "play-indicator" : "detail-indicator";
   play.setAttribute("aria-hidden", "true");
 
+  const number = document.createElement("span");
+  number.className = "window-number";
+  number.textContent = String(index + 1).padStart(2, "0");
+
   const text = document.createElement("span");
   text.className = "window-text";
 
@@ -188,7 +194,7 @@ function createProjectButton(project, variant = "standard") {
   short.textContent = project.short;
 
   text.append(group, title, short);
-  button.append(image, overlay, play, text);
+  button.append(image, overlay, number, play, text);
   return button;
 }
 
@@ -198,7 +204,7 @@ function renderProjects() {
   portfolio.showcase.primaryProjectIds
     .map(getProject)
     .filter(Boolean)
-    .forEach((project) => spotlight.appendChild(createProjectButton(project, "spotlight")));
+    .forEach((project, index) => spotlight.appendChild(createProjectButton(project, "spotlight", index)));
 
   const categoryStrip = $("#category-strip");
   categoryStrip.innerHTML = "";
@@ -207,18 +213,22 @@ function renderProjects() {
     button.className = "category-tile";
     button.type = "button";
     button.dataset.project = tile.projectId;
+    const number = document.createElement("small");
     const label = document.createElement("strong");
     const note = document.createElement("span");
+    const project = getProject(tile.projectId);
+    if (project?.accent) button.style.setProperty("--accent", project.accent);
+    number.textContent = tile.number || "";
     label.textContent = tile.label;
     note.textContent = tile.note;
-    button.append(label, note);
+    button.append(number, label, note);
     categoryStrip.appendChild(button);
   });
 
   const grid = $("#project-grid");
   grid.innerHTML = "";
-  portfolio.projects.forEach((project) => {
-    grid.appendChild(createProjectButton(project));
+  portfolio.projects.forEach((project, index) => {
+    grid.appendChild(createProjectButton(project, "standard", index));
   });
 }
 
@@ -264,11 +274,18 @@ function renderDialogMedia(project) {
 function renderDialogActions(project) {
   dialogActions.innerHTML = "";
   const highQualityUrl = project.media?.highQualityUrl;
+  const losslessHref = project.media?.type === "video" ? `lossless.html#${project.id}` : "";
   const fallbackUrl = project.link || project.media?.src;
+
+  if (losslessHref) {
+    dialogActions.appendChild(
+      createLink({ label: portfolio.labels.openLosslessPage, href: losslessHref }, "button primary"),
+    );
+  }
 
   if (highQualityUrl) {
     dialogActions.appendChild(
-      createLink({ label: portfolio.labels.openVideoLink, href: highQualityUrl }, "button primary"),
+      createLink({ label: portfolio.labels.openVideoLink, href: highQualityUrl }, "button secondary"),
     );
   }
 
@@ -304,8 +321,14 @@ document.addEventListener("click", (event) => {
   if (trigger) openProject(trigger.dataset.project);
 });
 
-dialogClose.addEventListener("click", () => dialog.close());
+dialogClose.addEventListener("click", () => {
+  dialog.close();
+  dialogMedia.innerHTML = "";
+});
 
 dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
+  if (event.target === dialog) {
+    dialog.close();
+    dialogMedia.innerHTML = "";
+  }
 });
