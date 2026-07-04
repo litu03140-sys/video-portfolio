@@ -101,6 +101,12 @@ function renderStaticText() {
   setText("#hero-role", hero.role);
   setText("#hero-copy", hero.copy);
 
+  const photo = $("#profile-photo");
+  if (photo && hero.photo) {
+    photo.src = hero.photo.src;
+    photo.alt = hero.photo.alt || hero.title;
+  }
+
   const facts = $("#profile-facts");
   facts.innerHTML = "";
   hero.facts.forEach((item) => {

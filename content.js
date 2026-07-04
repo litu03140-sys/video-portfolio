@@ -1,13 +1,24 @@
 window.PORTFOLIO_CONTENT = {
   site: {
     brand: "Video Portfolio",
-    title: "视频创作者作品集",
-    browserTitle: "你的姓名 | 视频创作者作品集",
+    title: "孔子杰视频创作者作品集",
+    browserTitle: "孔子杰 | 游戏宣发与影视媒体作品集",
     description:
-      "视频创作者面试作品集，集中展示 Vlog、调色、日常剪辑、摄影、灯光和美术方向作品。",
-    author: 孔子杰",
+      "孔子杰的游戏宣发与影视媒体方向作品集，集中展示视频剪辑、摄影灯光、赛事导播、AIGC 内容创作与项目统筹能力。",
+    author: "孔子杰",
     siteUrl: "https://litu03140-sys.github.io/video-portfolio/",
-    keywords: ["视频作品集", "Vlog", "后期制作", "调色", "摄影", "灯光", "美术"],
+    keywords: [
+      "孔子杰",
+      "视频作品集",
+      "游戏宣发",
+      "影视媒体",
+      "Vlog",
+      "后期制作",
+      "摄影灯光",
+      "赛事导播",
+      "AIGC",
+      "南京传媒学院",
+    ],
     heroImage: {
       src: "assets/hero-portfolio.png",
       alt: "影视创作工作室中的剪辑台、摄影机、灯光和美术道具",
@@ -34,17 +45,29 @@ window.PORTFOLIO_CONTENT = {
   },
 
   hero: {
-    eyebrow: "Video Creator Portfolio",
-    title: "你的姓名",
-    role: "视频创作者 / 后期制作 / 摄影执行",
+    eyebrow: "Nanjing Communication University · Portfolio",
+    title: "孔子杰",
+    role: "南京传媒学院本科在读 / 游戏宣发与影视媒体方向",
+    photo: {
+      src: "assets/profile-kong-zijie.jpg",
+      alt: "孔子杰个人照片",
+    },
     copy:
-      "擅长把生活素材整理成有节奏、有情绪、有完成度的短片；也能参与摄影、灯光和美术协同，让画面从拍摄到交付保持统一。",
+      "具备视频剪辑、摄影灯光、赛事导播、新媒体运营和项目统筹经验，熟悉影视制作基础流程，也能使用 AIGC 工具辅助资料整理、内容创作和项目管理。",
     facts: [
-      { label: "方向", value: "Vlog / 调色 / 日常剪辑" },
-      { label: "城市", value: "你的城市" },
-      { label: "邮箱", value: "your.email@example.com", href: "mailto:your.email@example.com" },
+      { label: "方向", value: "游戏宣发 / 影视媒体 / 视频制作" },
+      { label: "学校", value: "南京传媒学院" },
+      { label: "邮箱", value: "kj5925371@163.com", href: "mailto:kj5925371@163.com" },
     ],
-    tags: ["Premiere / 剪辑", "DaVinci / 调色", "摄影协作", "灯光与美术理解"],
+    tags: [
+      "Premiere Pro / 剪辑",
+      "DaVinci Resolve / 调色",
+      "Photoshop / Illustrator",
+      "摄影灯光执行",
+      "赛事导播与直播中控",
+      "AIGC 内容创作",
+      "项目统筹与团队协作",
+    ],
     actions: [
       { label: "查看精选作品", href: "#top", style: "primary" },
       { label: "无损原片入口", href: "lossless.html", style: "secondary" },
@@ -99,9 +122,10 @@ window.PORTFOLIO_CONTENT = {
     eyebrow: "Profile",
     title: "详细内容",
     paragraphs: [
-      "我关注的是作品从素材到成片的完整性：节奏是否顺、画面是否统一、信息是否清楚、情绪是否成立。",
-      "在团队协作中，我可以根据项目目标快速判断素材价值，并把剪辑、调色、声音、字幕和画面细节整理成稳定可交付的版本。",
-      "我希望作品在第一眼就能交代质感，在继续观看时仍然有稳定的细节、情绪和完成度。",
+      "我目前就读于南京传媒学院，关注游戏宣发、影视媒体、视频内容制作与新媒体运营方向，希望把内容创意、影像执行和项目推进能力结合起来。",
+      "在南京传媒学院 204 实验室摄影灯光组参与影视项目拍摄与制作，负责过灯光架设、现场执行、设备调试和后期支持，也参与过短片剧组协作，对影视制作流程有完整认知。",
+      "我在浪速立直雀庄负责赛事导播与直播中控，独立维护 B 站直播间运营与内容发布；同时有班级管理、辩论赛事统筹和全国高校赛事领队经历，具备较强的沟通协调、复盘分析和执行推进能力。",
+      "技能方面熟悉 Photoshop、Premiere Pro、Illustrator、DaVinci Resolve、WPS Office 与 Microsoft Office，也在持续使用 ChatGPT、Gemini、Codex、LiblibAI、即梦等 AIGC 工具辅助创作和项目管理。",
     ],
   },
 

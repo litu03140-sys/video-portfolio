@@ -217,6 +217,24 @@ h2 {
   justify-content: center;
 }
 
+.profile-head {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 112px;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(244, 239, 229, 0.28);
+  border-radius: var(--radius);
+  background: #f4efe5;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
 .showcase-panel {
   display: flex;
   flex-direction: column;
@@ -973,6 +991,15 @@ pre {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .category-tile {
+    min-height: 50px;
+    padding: 10px 12px;
+  }
+
+  .category-tile small {
+    display: none;
+  }
+
   .category-tile span {
     display: none;
   }
@@ -1003,8 +1030,17 @@ pre {
     padding: 20px;
   }
 
+  .profile-head {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .profile-photo {
+    width: 82px;
+  }
+
   h1 {
-    font-size: 44px;
+    font-size: 40px;
   }
 
   .category-strip,
