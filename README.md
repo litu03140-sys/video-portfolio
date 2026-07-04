@@ -6,6 +6,10 @@
 
 https://litu03140-sys.github.io/video-portfolio/
 
+经历与能力子网页：
+
+https://litu03140-sys.github.io/video-portfolio/experience.html
+
 你自己看的修改说明：
 
 https://litu03140-sys.github.io/video-portfolio/admin.html
@@ -78,3 +82,40 @@ media: {
 无损页链接：
 
 https://litu03140-sys.github.io/video-portfolio/lossless.html
+
+## 添加工作图片
+
+把图片放到这个文件夹：
+
+```text
+assets/evidence/
+```
+
+例如你有一张导播现场图片，可以命名为：
+
+```text
+assets/evidence/live-directing.jpg
+```
+
+然后打开 `content.js`，找到：
+
+```js
+experience: {
+  evidence: {
+    images: []
+  }
+}
+```
+
+改成：
+
+```js
+images: [
+  {
+    src: "assets/evidence/live-directing.jpg",
+    title: "导播中控现场"
+  }
+]
+```
+
+保存后，经历与能力页会自动显示图片。
