@@ -5,7 +5,7 @@ window.PORTFOLIO_CONTENT = {
     browserTitle: "你的姓名 | 视频创作者作品集",
     description:
       "视频创作者面试作品集，集中展示 Vlog、调色、日常剪辑、摄影、灯光和美术方向作品。",
-    author: "你的姓名",
+    author: 孔子杰",
     siteUrl: "https://litu03140-sys.github.io/video-portfolio/",
     keywords: ["视频作品集", "Vlog", "后期制作", "调色", "摄影", "灯光", "美术"],
     heroImage: {
