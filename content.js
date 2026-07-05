@@ -308,32 +308,7 @@ window.PORTFOLIO_CONTENT = {
     {
       id: "vlog-video-01",
       group: "后期制作 / Vlog",
-      title: "Vlog 作品 01",
-      short: "3 分钟生活记录短片",
-      description:
-        "以生活切片建立观看节奏，通过动作点、环境声和段落音乐让日常素材形成完整叙事。",
-      role: "素材筛选、粗剪、精剪、音乐节奏、字幕包装",
-      focus: "节奏控制、自然转场、声音连接",
-      output: "Vlog 成片与平台发布版本",
-      accent: "#3fb6a8",
-      image: "assets/video-posters/vlog-video-01.png",
-      media: {
-        type: "video",
-        src: "media/post-production/vlog-web/vlog-video-01.m4v",
-        mimeType: "video/mp4",
-        poster: "assets/video-posters/vlog-video-01.png",
-        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=2",
-        losslessUrl: "",
-        originalFileName: "copy_A98E020C-E26F-4F26-BD71-9D7DE9A1E9BC.MOV",
-        originalSize: "约 745MB",
-        embedUrl:
-          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=2&high_quality=1&autoplay=0",
-      },
-    },
-    {
-      id: "vlog-video-02",
-      group: "后期制作 / Vlog",
-      title: "Vlog 作品 02",
+      title: "18岁生日Vlog",
       short: "长素材整理与段落剪辑",
       description:
         "从更长的素材中提炼情绪段落，控制空间转换和叙事节奏，让观看体验保持清晰。",
@@ -353,6 +328,31 @@ window.PORTFOLIO_CONTENT = {
         originalSize: "约 2.6GB",
         embedUrl:
           "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=1&high_quality=1&autoplay=0",
+      },
+    },
+    {
+      id: "vlog-video-02",
+      group: "后期制作 / Vlog",
+      title: "19岁生日Vlog",
+      short: "3 分钟生活记录短片",
+      description:
+        "以生活切片建立观看节奏，通过动作点、环境声和段落音乐让日常素材形成完整叙事。",
+      role: "素材筛选、粗剪、精剪、音乐节奏、字幕包装",
+      focus: "节奏控制、自然转场、声音连接",
+      output: "Vlog 成片与平台发布版本",
+      accent: "#3fb6a8",
+      image: "assets/video-posters/vlog-video-01.png",
+      media: {
+        type: "video",
+        src: "media/post-production/vlog-web/vlog-video-01.m4v",
+        mimeType: "video/mp4",
+        poster: "assets/video-posters/vlog-video-01.png",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=2",
+        losslessUrl: "",
+        originalFileName: "copy_A98E020C-E26F-4F26-BD71-9D7DE9A1E9BC.MOV",
+        originalSize: "约 745MB",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=2&high_quality=1&autoplay=0",
       },
     },
     {
