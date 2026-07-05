@@ -322,11 +322,12 @@ window.PORTFOLIO_CONTENT = {
         src: "media/post-production/vlog-web/vlog-video-01.m4v",
         mimeType: "video/mp4",
         poster: "assets/video-posters/vlog-video-01.png",
-        highQualityUrl: "",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=2",
         losslessUrl: "",
         originalFileName: "copy_A98E020C-E26F-4F26-BD71-9D7DE9A1E9BC.MOV",
         originalSize: "约 745MB",
-        embedUrl: "",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=2&high_quality=1&autoplay=0",
       },
     },
     {
@@ -346,11 +347,12 @@ window.PORTFOLIO_CONTENT = {
         src: "media/post-production/vlog-web/vlog-video-02.m4v",
         mimeType: "video/mp4",
         poster: "assets/video-posters/vlog-video-02.png",
-        highQualityUrl: "",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=1",
         losslessUrl: "",
         originalFileName: "copy_7B2CBBAE-D7F5-4DFA-816A-F324AC651E90.MOV",
         originalSize: "约 2.6GB",
-        embedUrl: "",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=1&high_quality=1&autoplay=0",
       },
     },
     {
