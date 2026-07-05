@@ -18,6 +18,7 @@ const dialogOutputLabel = $("#dialog-output-label");
 const dialogRole = $("#dialog-role");
 const dialogFocus = $("#dialog-focus");
 const dialogOutput = $("#dialog-output");
+const dialogGallery = $("#dialog-gallery");
 const dialogActions = $("#dialog-actions");
 
 function setText(selector, value = "") {
@@ -302,11 +303,45 @@ function renderDialogActions(project) {
   }
 }
 
+function renderDialogGallery(project) {
+  dialogGallery.innerHTML = "";
+  const gallery = project.gallery || [];
+  if (!gallery.length) return;
+
+  const title = document.createElement("h3");
+  title.textContent = project.galleryTitle || "相关图片 / 制作资料";
+
+  const grid = document.createElement("div");
+  grid.className = "gallery-grid";
+
+  gallery.forEach((item) => {
+    const link = document.createElement("a");
+    link.className = "gallery-item";
+    link.href = item.src;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+
+    const image = document.createElement("img");
+    image.src = item.src;
+    image.alt = item.alt || item.caption || project.title;
+    image.loading = "lazy";
+
+    const caption = document.createElement("span");
+    caption.textContent = item.caption || "";
+
+    link.append(image, caption);
+    grid.appendChild(link);
+  });
+
+  dialogGallery.append(title, grid);
+}
+
 function openProject(projectId) {
   const project = getProject(projectId);
   if (!project) return;
 
   renderDialogMedia(project);
+  renderDialogGallery(project);
   renderDialogActions(project);
   dialogCategory.textContent = project.group;
   dialogTitle.textContent = project.title;

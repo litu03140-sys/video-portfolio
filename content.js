@@ -17,6 +17,10 @@ window.PORTFOLIO_CONTENT = {
       "摄影灯光",
       "赛事导播",
       "AIGC",
+      "AIGC创作",
+      "长镜头",
+      "摄影指导",
+      "小丑仿拍",
       "南京传媒学院",
     ],
     heroImage: {
@@ -81,16 +85,18 @@ window.PORTFOLIO_CONTENT = {
     eyebrow: "Selected Work",
     title: "打开就能看的作品",
     note: "首屏只保留最重要的信息：人、方向、作品入口。",
-    primaryProjectIds: ["vlog-video-01", "vlog-video-02"],
+    primaryProjectIds: ["vlog-video-01", "vlog-video-02", "xulai-long-take", "aigc-creation"],
   },
 
   categoryTiles: [
     { number: "01", label: "Vlog", projectId: "vlog-video-01", note: "叙事节奏 / 生活记录" },
     { number: "02", label: "调色", projectId: "color-grading", note: "色彩统一 / 氛围控制" },
     { number: "03", label: "日常剪辑", projectId: "daily-edit", note: "高频交付 / 信息效率" },
-    { number: "04", label: "摄影", projectId: "camera-work", note: "构图 / 运动 / 现场素材" },
-    { number: "05", label: "灯光", projectId: "lighting-work", note: "人物质感 / 空间层次" },
+    { number: "04", label: "摄影", projectId: "photo-assignment", note: "组照 / 构图 / 分镜" },
+    { number: "05", label: "灯光", projectId: "xulai-long-take", note: "长镜头 / 夜景 / 追光" },
     { number: "06", label: "美术", projectId: "art-direction", note: "道具 / 色彩 / 场景信息" },
+    { number: "07", label: "仿拍", projectId: "joker-remake", note: "DP / 影调复刻" },
+    { number: "08", label: "AIGC", projectId: "aigc-creation", note: "独立创作 / AI 影像" },
   ],
 
   works: {
@@ -382,30 +388,136 @@ window.PORTFOLIO_CONTENT = {
       image: "assets/hero-portfolio.png",
     },
     {
-      id: "camera-work",
-      group: "摄影",
-      title: "摄影作品",
-      short: "构图、运动与素材完整度",
+      id: "photo-assignment",
+      group: "摄影 / 图摄作业",
+      title: "图摄作业：红蓝低照度摄影",
+      short: "组照、光色与分镜资料",
       description:
-        "通过景别变化、运动控制和现场素材检查，为后期剪辑留下足够的信息层级。",
-      role: "镜头设计、机位执行、运动控制、素材检查",
-      focus: "质感、焦点、景别变化",
-      output: "项目素材包与成片镜头",
-      accent: "#3fb6a8",
-      image: "assets/hero-portfolio.png",
+        "围绕红蓝色光、低照度质感和人物道具关系完成一组带叙事情绪的图摄作品，并保留镜头设计、灯位与设备资料。",
+      role: "导演 / 视觉风格统筹 / 分镜与设备组织",
+      focus: "红蓝反差、低照度控制、人物剪影、道具关系",
+      output: "摄影成片组照 + 镜头 / 灯位资料",
+      accent: "#bf6653",
+      image: "assets/project-media/photography/photo-assignment-01.jpg",
+      galleryTitle: "成片与制作资料",
+      gallery: [
+        {
+          src: "assets/project-media/photography/photo-assignment-01.jpg",
+          caption: "成片 01 / 红色低照度人物",
+        },
+        {
+          src: "assets/project-media/photography/photo-assignment-02.jpg",
+          caption: "成片 02 / 道具特写",
+        },
+        {
+          src: "assets/project-media/photography/photo-assignment-03.jpg",
+          caption: "成片 03 / 人物压迫感",
+        },
+        {
+          src: "assets/project-media/photography/photo-assignment-04.jpg",
+          caption: "成片 04 / 动作关系",
+        },
+        {
+          src: "assets/project-media/photography/photo-assignment-05.jpg",
+          caption: "成片 05 / 蓝色氛围",
+        },
+        {
+          src: "assets/project-media/photography/shot-plan-01.png",
+          caption: "镜 1-2 / 灯位与机位资料",
+        },
+        {
+          src: "assets/project-media/photography/shot-plan-03.png",
+          caption: "镜 3 / 机位设计",
+        },
+        {
+          src: "assets/project-media/photography/shot-plan-04-05.png",
+          caption: "镜 4-5 / 镜头规划",
+        },
+        {
+          src: "assets/project-media/photography/shot-plan-07.png",
+          caption: "镜 7 / 镜头规划",
+        },
+        {
+          src: "assets/project-media/photography/shot-plan-08.png",
+          caption: "镜 8 / 镜头规划",
+        },
+      ],
     },
     {
-      id: "lighting-work",
-      group: "灯光",
-      title: "灯光作品",
-      short: "人物质感与空间层次",
+      id: "xulai-long-take",
+      group: "摄影 / 灯光 / 长镜头",
+      title: "《徐来》长镜头",
+      short: "摄影与灯光执行",
       description:
-        "以主体可读性、肤色和背景分离为核心，控制画面的情绪与观看舒适度。",
-      role: "主光、辅光、轮廓光、背景光控制",
-      focus: "肤色、反差、空间分离",
-      output: "人物与场景灯光方案",
+        "夜景长镜头短片，以红蓝冷暖对比和持续运动调度表现暧昧关系中的期待、错过与重逢。",
+      role: "摄影 / 灯光",
+      focus: "长镜头调度、夜景曝光、T2C 追光、红蓝光比控制",
+      output: "B 站成片 + 灯位图 + 故事板",
       accent: "#d79b49",
-      image: "assets/hero-portfolio.png",
+      image: "assets/project-media/xulai/lighting-plan.png",
+      media: {
+        type: "video",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=4",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=4&high_quality=1&autoplay=0",
+      },
+      galleryTitle: "《徐来》制作资料",
+      gallery: [
+        {
+          src: "assets/video-posters/xulai-long-take.jpg",
+          caption: "成片帧 / 夜景长镜头",
+        },
+        {
+          src: "assets/project-media/xulai/lighting-plan.png",
+          caption: "灯位图 / T2C 追光与顶光设计",
+        },
+        {
+          src: "assets/project-media/xulai/storyboard-01.jpg",
+          caption: "故事板 01 / 镜头推进",
+        },
+        {
+          src: "assets/project-media/xulai/storyboard-02.jpg",
+          caption: "故事板 02 / 花与错过",
+        },
+      ],
+    },
+    {
+      id: "joker-remake",
+      group: "摄影指导 / 仿拍",
+      title: "《小丑》仿拍",
+      short: "DP / 影调复刻",
+      description:
+        "围绕《小丑》片段的光线方向、人物质感和情绪色彩进行仿拍，重点呈现人物面部层次与环境氛围。",
+      role: "摄影指导（DP）",
+      focus: "影调复刻、人物质感、光线方向、镜头气氛",
+      output: "B 站 P3 成片",
+      accent: "#3f8fb6",
+      image: "assets/video-posters/joker-remake.jpg",
+      media: {
+        type: "video",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=3",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=3&high_quality=1&autoplay=0",
+      },
+    },
+    {
+      id: "aigc-creation",
+      group: "AIGC / 独立创作",
+      title: "AIGC 独立创作",
+      short: "全流程独立完成",
+      description:
+        "独立完成创意构思、AIGC 生成、素材筛选、剪辑整合与成片输出，展示 AI 影像工具在叙事短片中的应用能力。",
+      role: "全流程独立创作",
+      focus: "提示词设计、AI 影像生成、版本筛选、叙事剪辑",
+      output: "B 站 P5 成片",
+      accent: "#9fae62",
+      image: "assets/video-posters/aigc-creation.jpg",
+      media: {
+        type: "video",
+        highQualityUrl: "https://www.bilibili.com/video/BV1dZMP6tE3E?p=5",
+        embedUrl:
+          "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=5&high_quality=1&autoplay=0",
+      },
     },
     {
       id: "art-direction",

@@ -57,6 +57,32 @@ hero: {
 
 只改 `title`、`short`、`description` 这些引号里的中文。
 
+## 换 B 站视频分 P
+
+在 `content.js` 里找到对应作品的 `media`：
+
+```js
+media: {
+  highQualityUrl: "https://www.bilibili.com/video/BV号?p=3",
+  embedUrl: "https://player.bilibili.com/player.html?bvid=BV号&page=3&high_quality=1&autoplay=0"
+}
+```
+
+只需要把 `BV号` 和 `p=3` / `page=3` 改成你要的分 P。
+
+## 给作品加图片组
+
+把图片放到 `assets/project-media/` 下面，然后在作品里加：
+
+```js
+gallery: [
+  {
+    src: "assets/project-media/你的图片.jpg",
+    caption: "图片说明"
+  }
+]
+```
+
 ## 填无损原片链接
 
 你现在有两个原始 MOV 文件在桌面：

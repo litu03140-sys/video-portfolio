@@ -5,7 +5,7 @@ if (!portfolio) {
 }
 
 const lossless = portfolio.lossless;
-const videoProjects = portfolio.projects.filter((project) => project.media?.type === "video");
+const videoProjects = portfolio.projects.filter((project) => project.media?.type === "video" && project.media?.src);
 
 function text(selector, value = "") {
   const element = document.querySelector(selector);
