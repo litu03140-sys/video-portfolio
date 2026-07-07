@@ -90,8 +90,11 @@ function renderStaticText() {
   const { site, hero, showcase, works, about, labels } = portfolio;
 
   setText("#site-brand", site.brand);
-  $("#hero-image").src = site.heroImage.src;
-  $("#hero-image").alt = site.heroImage.alt;
+  const heroImage = $("#hero-image");
+  if (heroImage) {
+    heroImage.src = site.heroImage.src;
+    heroImage.alt = site.heroImage.alt;
+  }
 
   const nav = $("#site-nav");
   nav.innerHTML = "";
@@ -207,30 +210,34 @@ function createProjectButton(project, variant = "standard", index = 0) {
 
 function renderProjects() {
   const spotlight = $("#spotlight-grid");
-  spotlight.innerHTML = "";
-  portfolio.showcase.primaryProjectIds
-    .map(getProject)
-    .filter(Boolean)
-    .forEach((project, index) => spotlight.appendChild(createProjectButton(project, "spotlight", index)));
+  if (spotlight) {
+    spotlight.innerHTML = "";
+    portfolio.showcase.primaryProjectIds
+      .map(getProject)
+      .filter(Boolean)
+      .forEach((project, index) => spotlight.appendChild(createProjectButton(project, "spotlight", index)));
+  }
 
   const categoryStrip = $("#category-strip");
-  categoryStrip.innerHTML = "";
-  portfolio.categoryTiles.forEach((tile) => {
-    const button = document.createElement("button");
-    button.className = "category-tile";
-    button.type = "button";
-    button.dataset.project = tile.projectId;
-    const number = document.createElement("small");
-    const label = document.createElement("strong");
-    const note = document.createElement("span");
-    const project = getProject(tile.projectId);
-    if (project?.accent) button.style.setProperty("--accent", project.accent);
-    number.textContent = tile.number || "";
-    label.textContent = tile.label;
-    note.textContent = tile.note;
-    button.append(number, label, note);
-    categoryStrip.appendChild(button);
-  });
+  if (categoryStrip) {
+    categoryStrip.innerHTML = "";
+    portfolio.categoryTiles.forEach((tile) => {
+      const button = document.createElement("button");
+      button.className = "category-tile";
+      button.type = "button";
+      button.dataset.project = tile.projectId;
+      const number = document.createElement("small");
+      const label = document.createElement("strong");
+      const note = document.createElement("span");
+      const project = getProject(tile.projectId);
+      if (project?.accent) button.style.setProperty("--accent", project.accent);
+      number.textContent = tile.number || "";
+      label.textContent = tile.label;
+      note.textContent = tile.note;
+      button.append(number, label, note);
+      categoryStrip.appendChild(button);
+    });
+  }
 
   const grid = $("#project-grid");
   grid.innerHTML = "";
@@ -281,24 +288,23 @@ function renderDialogMedia(project) {
 function renderDialogActions(project) {
   dialogActions.innerHTML = "";
   const highQualityUrl = project.media?.highQualityUrl;
-  const losslessHref = project.media?.type === "video" ? `lossless.html#${project.id}` : "";
   const fallbackUrl = project.link || project.media?.src;
-
-  if (losslessHref) {
-    dialogActions.appendChild(
-      createLink({ label: portfolio.labels.openLosslessPage, href: losslessHref }, "button primary"),
-    );
-  }
 
   if (highQualityUrl) {
     dialogActions.appendChild(
-      createLink({ label: portfolio.labels.openVideoLink, href: highQualityUrl }, "button secondary"),
+      createLink(
+        { label: portfolio.labels.openVideoLink, href: highQualityUrl, target: "_blank", rel: "noreferrer" },
+        "button primary",
+      ),
     );
   }
 
-  if (fallbackUrl) {
+  if (!highQualityUrl && fallbackUrl) {
     dialogActions.appendChild(
-      createLink({ label: portfolio.labels.openProjectLink, href: fallbackUrl }, "button secondary"),
+      createLink(
+        { label: portfolio.labels.openProjectLink, href: fallbackUrl, target: "_blank", rel: "noreferrer" },
+        "button secondary",
+      ),
     );
   }
 }

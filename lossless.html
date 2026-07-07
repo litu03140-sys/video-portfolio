@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>无损原片观看 | 视频创作者作品集</title>
+    <title>原片入口 | 视频创作者作品集</title>
     <meta
       name="description"
-      content="视频创作者作品集无损原片观看页，可接入公开原片直链。"
+      content="视频创作者作品集原片入口，可直接打开 B 站对应视频。"
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://litu03140-sys.github.io/video-portfolio/lossless.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -21,7 +21,7 @@
       </a>
       <nav class="nav-links" aria-label="原片页导航">
         <a href="index.html">作品集首页</a>
-        <a href="admin.html">后台修改说明</a>
+        <a href="index.html#works">全部作品</a>
       </nav>
     </header>
 
@@ -32,22 +32,10 @@
         <p id="lossless-copy"></p>
         <div class="hero-actions">
           <a class="button primary" href="index.html" id="lossless-back"></a>
-          <a class="button secondary" href="admin.html" id="lossless-admin"></a>
         </div>
       </section>
 
-      <section class="lossless-list" id="lossless-list" aria-label="无损原片列表"></section>
-
-      <section class="lossless-note section-wrap" aria-labelledby="lossless-how-title">
-        <div>
-          <p class="eyebrow">How It Works</p>
-          <h2 id="lossless-how-title">不发视频平台，也能接无损</h2>
-        </div>
-        <div class="about-copy">
-          <p>把原始 MOV 上传到能提供公开直链的存储空间，例如阿里云 OSS、七牛云、又拍云、公司文件服务器或你自己的云服务器。</p>
-          <p>复制原片文件的 HTTPS 链接，粘贴到 `content.js` 里对应作品的 `losslessUrl`。保存后等待网页自动发布，面试官就可以从这里打开原片。</p>
-        </div>
-      </section>
+      <section class="lossless-list" id="lossless-list" aria-label="原片列表"></section>
     </main>
 
     <script src="content.js"></script>

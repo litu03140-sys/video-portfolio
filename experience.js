@@ -80,50 +80,60 @@ function renderSkills() {
 function renderTimeline() {
   const root = $("#timeline-list");
   root.innerHTML = "";
+  const groups = new Map();
+
   data.timeline.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "timeline-card";
+    if (!groups.has(item.type)) groups.set(item.type, []);
+    groups.get(item.type).push(item);
+  });
 
-    const meta = document.createElement("div");
-    meta.className = "timeline-meta";
-    const type = document.createElement("span");
-    const period = document.createElement("strong");
-    type.textContent = item.type;
-    period.textContent = item.period;
-    meta.append(type, period);
+  groups.forEach((items, typeName) => {
+    const section = document.createElement("section");
+    section.className = "timeline-group";
 
-    const header = document.createElement("div");
-    header.className = "timeline-header";
-    const titleWrap = document.createElement("div");
-    const title = document.createElement("h3");
-    const role = document.createElement("p");
-    title.textContent = item.title;
-    role.textContent = item.role;
-    titleWrap.append(title, role);
+    const groupTitle = document.createElement("h3");
+    groupTitle.textContent = typeName;
+    section.appendChild(groupTitle);
 
-    const tags = document.createElement("div");
-    tags.className = "timeline-tags";
-    item.tags.forEach((tag) => {
-      const tagEl = document.createElement("span");
-      tagEl.textContent = tag;
-      tags.appendChild(tagEl);
+    items.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "timeline-card";
+
+      const header = document.createElement("div");
+      header.className = "timeline-header";
+      const titleWrap = document.createElement("div");
+      const title = document.createElement("h4");
+      const role = document.createElement("p");
+      title.textContent = item.title;
+      role.textContent = `${item.role}｜${item.period}`;
+      titleWrap.append(title, role);
+
+      const tags = document.createElement("div");
+      tags.className = "timeline-tags";
+      item.tags.forEach((tag) => {
+        const tagEl = document.createElement("span");
+        tagEl.textContent = tag;
+        tags.appendChild(tagEl);
+      });
+
+      header.append(titleWrap, tags);
+      card.append(header, listItems(item.points));
+
+      if (item.projects?.length) {
+        const projects = document.createElement("div");
+        projects.className = "project-roles";
+        item.projects.forEach((project) => {
+          const chip = document.createElement("span");
+          chip.textContent = project;
+          projects.appendChild(chip);
+        });
+        card.appendChild(projects);
+      }
+
+      section.appendChild(card);
     });
 
-    header.append(titleWrap, tags);
-    card.append(meta, header, listItems(item.points));
-
-    if (item.projects?.length) {
-      const projects = document.createElement("div");
-      projects.className = "project-roles";
-      item.projects.forEach((project) => {
-        const chip = document.createElement("span");
-        chip.textContent = project;
-        projects.appendChild(chip);
-      });
-      card.appendChild(projects);
-    }
-
-    root.appendChild(card);
+    root.appendChild(section);
   });
 }
 
@@ -182,7 +192,6 @@ function renderPage() {
   renderStrengths();
   renderSkills();
   renderTimeline();
-  renderEvidence();
   renderSimpleList("#award-list", data.awards);
   renderSimpleList("#course-list", data.courses);
 }

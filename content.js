@@ -1,6 +1,6 @@
 window.PORTFOLIO_CONTENT = {
   site: {
-    brand: "Video Portfolio",
+    brand: "孔子杰作品集",
     title: "孔子杰视频创作者作品集",
     browserTitle: "孔子杰 | 游戏宣发与影视媒体作品集",
     description:
@@ -30,27 +30,26 @@ window.PORTFOLIO_CONTENT = {
   },
 
   navigation: [
-    { label: "精选作品", href: "#top" },
-    { label: "经历与能力", href: "experience.html" },
-    { label: "全部项目", href: "#works" },
-    { label: "无损原片", href: "lossless.html" },
-    { label: "详细介绍", href: "#about" },
+    { label: "首页", href: "#top" },
+    { label: "个人信息", href: "experience.html" },
+    { label: "作品", href: "#works" },
+    { label: "联系", href: "#about" },
   ],
 
   labels: {
-    detailsButton: "播放 / 查看",
+    detailsButton: "查看详情",
     role: "职责",
     focus: "重点",
     output: "交付",
     closeDialog: "关闭",
-    openVideoLink: "打开高清链接",
-    openLosslessPage: "查看无损原片",
+    openVideoLink: "查看原片",
+    openLosslessPage: "查看原片",
     openProjectLink: "打开作品链接",
     videoFallback: "当前浏览器无法直接播放该视频，请使用下方链接打开。",
   },
 
   hero: {
-    eyebrow: "Nanjing Communication University · Portfolio",
+    eyebrow: "Portfolio / Resume",
     title: "孔子杰",
     role: "南京传媒学院本科在读 / 游戏宣发与影视媒体方向",
     photo: {
@@ -58,7 +57,7 @@ window.PORTFOLIO_CONTENT = {
       alt: "孔子杰个人照片",
     },
     copy:
-      "具备视频剪辑、摄影灯光、赛事导播、新媒体运营和项目统筹经验，熟悉影视制作基础流程，也能使用 AIGC 工具辅助资料整理、内容创作和项目管理。",
+      "面向游戏宣发、影视媒体与视频内容岗位。具备 Vlog 剪辑、摄影灯光、赛事导播、AIGC 独立创作、内容运营和项目统筹经验，能把创意、执行和复盘落到具体作品里。",
     facts: [
       { label: "方向", value: "游戏宣发 / 影视媒体 / 视频制作" },
       { label: "学校", value: "南京传媒学院" },
@@ -74,50 +73,46 @@ window.PORTFOLIO_CONTENT = {
       "项目统筹与团队协作",
     ],
     actions: [
-      { label: "查看精选作品", href: "#top", style: "primary" },
-      { label: "经历与能力", href: "experience.html", style: "secondary" },
-      { label: "无损原片入口", href: "lossless.html", style: "secondary" },
-      { label: "查看详细介绍", href: "#about", style: "secondary" },
+      { label: "查看个人信息", href: "experience.html", style: "primary" },
+      { label: "查看作品", href: "#works", style: "secondary" },
+      { label: "联系我", href: "mailto:kj5925371@163.com", style: "secondary" },
     ],
   },
 
   showcase: {
-    eyebrow: "Selected Work",
-    title: "打开就能看的作品",
-    note: "首屏只保留最重要的信息：人、方向、作品入口。",
-    primaryProjectIds: ["vlog-video-01", "vlog-video-02", "xulai-long-take", "aigc-creation"],
+    eyebrow: "Works",
+    title: "全部作品窗口",
+    note: "只保留已经提供视频或图片资料的真实作品。",
+    primaryProjectIds: [],
   },
 
   categoryTiles: [
     { number: "01", label: "Vlog", projectId: "vlog-video-01", note: "叙事节奏 / 生活记录" },
-    { number: "02", label: "调色", projectId: "color-grading", note: "色彩统一 / 氛围控制" },
-    { number: "03", label: "日常剪辑", projectId: "daily-edit", note: "高频交付 / 信息效率" },
-    { number: "04", label: "摄影", projectId: "photo-assignment", note: "组照 / 构图 / 分镜" },
-    { number: "05", label: "灯光", projectId: "xulai-long-take", note: "长镜头 / 夜景 / 追光" },
-    { number: "06", label: "美术", projectId: "art-direction", note: "道具 / 色彩 / 场景信息" },
-    { number: "07", label: "仿拍", projectId: "joker-remake", note: "DP / 影调复刻" },
-    { number: "08", label: "AIGC", projectId: "aigc-creation", note: "独立创作 / AI 影像" },
+    { number: "02", label: "摄影", projectId: "photo-assignment", note: "组照 / 构图 / 分镜" },
+    { number: "03", label: "灯光", projectId: "xulai-long-take", note: "长镜头 / 夜景 / 追光" },
+    { number: "04", label: "仿拍", projectId: "joker-remake", note: "DP / 影调复刻" },
+    { number: "05", label: "AIGC", projectId: "aigc-creation", note: "独立创作 / AI 影像" },
   ],
 
   works: {
-    eyebrow: "All Work",
+    eyebrow: "Works",
     title: "全部作品窗口",
-    note: "每个窗口都能进入详情，适合面试官按方向快速浏览。",
+    note: "只展示已经提供素材或成片的作品。点开作品可看职责说明；点击“查看原片”会直接跳转到 B 站对应视频。",
   },
 
   lossless: {
-    eyebrow: "Original Master",
-    title: "无损原片观看页",
+    eyebrow: "Original Video",
+    title: "原片入口",
     copy:
-      "这里用于放原始画质视频。它不依赖 Bilibili 或腾讯视频，只需要一个可公开访问的原片直链。",
-    emptyTitle: "无损直链还没有填写",
+      "这里保留旧入口。现在作品详情里的“查看原片”会直接打开 B 站对应视频页面。",
+    emptyTitle: "请查看 B 站原片",
     emptyCopy:
-      "当前先播放网页预览版。把原片上传到云存储后，将直链填入 content.js 的 losslessUrl，就会自动变成无损播放入口。",
+      "点击“查看原片”即可进入 B 站对应视频页面。",
     localPreview: "本机选择原片预览",
-    directLink: "打开原片直链",
+    directLink: "查看原片",
     downloadLink: "下载原片",
     backLink: "返回作品集首页",
-    adminLink: "查看修改方法",
+    adminLink: "返回作品集首页",
   },
 
   admin: {
@@ -128,12 +123,13 @@ window.PORTFOLIO_CONTENT = {
 
   about: {
     eyebrow: "Profile",
-    title: "详细内容",
+    title: "个人信息与能力概览",
     paragraphs: [
-      "我目前就读于南京传媒学院，关注游戏宣发、影视媒体、视频内容制作与新媒体运营方向，希望把内容创意、影像执行和项目推进能力结合起来。",
-      "在南京传媒学院 204 实验室摄影灯光组参与影视项目拍摄与制作，负责过灯光架设、现场执行、设备调试和后期支持，也参与过短片剧组协作，对影视制作流程有完整认知。",
-      "我在浪速立直雀庄负责赛事导播与直播中控，独立维护 B 站直播间运营与内容发布；同时有班级管理、辩论赛事统筹和全国高校赛事领队经历，具备较强的沟通协调、复盘分析和执行推进能力。",
-      "技能方面熟悉 Photoshop、Premiere Pro、Illustrator、DaVinci Resolve、WPS Office 与 Microsoft Office，也在持续使用 ChatGPT、Gemini、Codex、LiblibAI、即梦等 AIGC 工具辅助创作和项目管理。",
+      "南京传媒学院戏剧影视导演本科在读，求职方向为游戏宣发、影视媒体、视频制作、内容运营、电竞节目编导等岗位。",
+      "影像能力上，能够完成 Vlog 剪辑、长镜头摄影、现场灯光执行、摄影组照与分镜资料整理；已参与《徐来》长镜头、《小丑》仿拍、图摄作业和 AIGC 视频创作。",
+      "项目与运营能力上，负责过浪速立直雀庄赛事导播与 B 站直播间管理，具备直播中控、账号维护、赛事信息传达和现场执行经验。",
+      "组织协调能力上，有班长、辩论队队长、校队领队经历，能进行队伍组建、角色分工、训练安排、风险预案、赛后复盘和跨人员沟通。",
+      "工具能力上，熟悉 Premiere Pro、DaVinci Resolve、Photoshop、Illustrator、WPS Office、Microsoft Office；常用 ChatGPT、Gemini、Codex、DeepSeek、LiblibAI、即梦等 AIGC 工具辅助创作、资料整理和项目管理。",
     ],
   },
 
@@ -362,32 +358,6 @@ window.PORTFOLIO_CONTENT = {
       },
     },
     {
-      id: "color-grading",
-      group: "后期制作 / 调色",
-      title: "调色作品",
-      short: "色彩统一与氛围控制",
-      description:
-        "围绕肤色、暗部层次和冷暖关系建立统一色彩，让不同机位素材保持稳定观感。",
-      role: "基础校正、镜头匹配、风格化调色、导出检查",
-      focus: "肤色保护、暗部层次、暖冷对比",
-      output: "Rec.709 成片与平台版本",
-      accent: "#9fae62",
-      image: "assets/hero-portfolio.png",
-    },
-    {
-      id: "daily-edit",
-      group: "后期制作 / 日常剪辑",
-      title: "日常剪辑作品",
-      short: "信息清楚，节奏紧凑",
-      description:
-        "面向高频内容交付，优先保证开场钩子、信息密度和多平台版本适配。",
-      role: "脚本拆分、剪辑、字幕、封面帧建议、版本适配",
-      focus: "开场钩子、信息密度、平台比例",
-      output: "9:16 / 1:1 / 16:9 多版本",
-      accent: "#bf6653",
-      image: "assets/hero-portfolio.png",
-    },
-    {
       id: "photo-assignment",
       group: "摄影 / 图摄作业",
       title: "图摄作业：红蓝低照度摄影",
@@ -518,19 +488,6 @@ window.PORTFOLIO_CONTENT = {
         embedUrl:
           "https://player.bilibili.com/player.html?bvid=BV1dZMP6tE3E&page=5&high_quality=1&autoplay=0",
       },
-    },
-    {
-      id: "art-direction",
-      group: "美术",
-      title: "美术作品",
-      short: "道具、色彩与画面信息",
-      description:
-        "通过道具、材质和色彩关系强化主体信息，让画面第一眼就能读出内容类型和情绪。",
-      role: "道具选择、色彩搭配、画面陈列、现场维护",
-      focus: "信息层级、材质对比、色彩统一",
-      output: "产品与生活方式场景",
-      accent: "#9fae62",
-      image: "assets/hero-portfolio.png",
     },
   ],
 };
